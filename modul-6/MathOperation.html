@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+    <style>
+        .math {
+
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+
+        }
+
+        table {
+
+            padding: 30px;
+            border: 5px solid;
+            height: 200px;
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="math">
+        <table>
+            <tr>
+                <th colspan="2"><strong>Math Operations</strong></th>
+            </tr>
+            <tr>
+                <td> <label for="first_num">Enter 1st number</label></td>
+                <td><input type="text" id="first_num"></td>
+            </tr>
+            <tr>
+                <td><label for="second_num">Enter 2nd number</label></td>
+                <td><input type="text" id="second_num"></td>
+            </tr>
+            <tr>
+                <td> <button type="button" id="add">+</button>
+                    <button type="button" id="subtract">-</button>
+                    <button type="button" id="multiply">*</button>
+                </td>
+                <td>
+                    <p>Answer is: <span id="answer"></span></p>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="button" id="divide">/</button>
+                    <button type="button" id="modulus">%</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const answer = document.getElementById("answer");
+
+        document.getElementById("add").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x + y;
+            answer.innerHTML = result;
+        });
+
+
+        document.getElementById("subtract").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x - y;
+            answer.innerHTML = result;
+        });
+
+        document.getElementById("multiply").addEventListener("click", () => {
+            let x = parseFloat(document.getElementById("first_num").value);
+            let y = parseFloat(document.getElementById("second_num").value);
+            let result = x * y;
+            anss
+        });
+
+        document.getElementById("modulus").addEventListener("click", () => {
+            let x = parseInt(document.getElementById("first_num").value);
+            let y = parseInt(document.getElementById("second_num").value);
+            let result = x % y;
+            answer.innerHTML = result;
+
+        });
+        answer.style.color = 'red';
+    </script>
+</body>
+
+</html>
